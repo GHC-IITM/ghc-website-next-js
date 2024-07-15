@@ -17,53 +17,6 @@ import {
 import { ReactElement } from "react";
 import { FcApproval, FcBullish, FcConferenceCall } from "react-icons/fc";
 
-interface CardProps {
-  heading: string;
-  description?: string;
-  icon: ReactElement;
-  href: string;
-}
-
-const Card = ({ heading, description, icon, href }: CardProps) => {
-  return (
-    <Box
-      maxW={{ base: "full", md: "300px" }}
-      w={"full"}
-      borderWidth="1px"
-      borderRadius="lg"
-      overflow="hidden"
-      p={8}
-      bg={useColorModeValue("gray.50", "gray.800")}
-    >
-      <Stack align={"start"} spacing={2}>
-        <Flex
-          w={16}
-          h={16}
-          align={"center"}
-          justify={"center"}
-          color={"white"}
-          rounded={"full"}
-          bg={useColorModeValue("gray.200", "gray.700")}
-        >
-          {icon}
-        </Flex>
-        <Box mt={2}>
-          <Heading size="md" mb={4}>
-            {heading}
-          </Heading>
-          {description && (
-            <Text mt={1} fontSize={"sm"}>
-              {description}
-            </Text>
-          )}
-        </Box>
-        {/* <Button variant={'link'} colorScheme={'red'} size={'sm'}>
-                    Learn more
-                </Button> */}
-      </Stack>
-    </Box>
-  );
-};
 
 export default function MissionNdvalues() {
   return (
@@ -178,49 +131,7 @@ export default function MissionNdvalues() {
         </SimpleGrid>
       </Container>
 
-      <Stack
-        spacing={4}
-        as={Container}
-        maxW={"3xl"}
-        textAlign={"center"}
-        my={6}
-      >
-        <Heading fontSize={{ base: "2xl", sm: "5xl" }} fontWeight={"bold"}>
-          GHC’s Mission
-        </Heading>
-        <Text color={"gray.600"} fontSize={{ base: "sm", sm: "lg" }}>
-          Transcending borders in speed and innovation
-        </Text>
-      </Stack>
 
-      <Container maxW={"5xl"} my={12}>
-        <Flex flexWrap="wrap" gridGap={6} justify="center">
-          <Card
-            heading={"The Hyperloop Vision"}
-            icon={<Icon as={FcBullish} w={10} h={10} />}
-            description={
-              "By explaining the technologies involved in Hyperloop and its associated benefits - incredible speed, safety and sustainability - to people, GHC will ensure the development of a massive Hyperloop community over the years to revolutionalise the existing transport system."
-            }
-            href={"#"}
-          />
-          <Card
-            heading={"The Conference"}
-            icon={<Icon as={FcConferenceCall} w={10} h={10} />}
-            description={
-              "Serving as a stage for Hyperloop enthusiasts, the Conference gives an opportunity for networking and collaboration among students, academicians and industrialists in order to propel the research and development of the hyperloop technologies."
-            }
-            href={"#"}
-          />
-          <Card
-            heading={"The Competition"}
-            icon={<Icon as={FcApproval} w={10} h={10} />}
-            description={
-              "The Competetion aims to engage students and teams to ideate, innovate and develop. The competitive spirit will drive teams to showcase different perspectives on the hyperloop technology and assist its growth."
-            }
-            href={"#"}
-          />
-        </Flex>
-      </Container>
     </Box>
   );
 }

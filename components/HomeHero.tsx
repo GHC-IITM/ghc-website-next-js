@@ -45,9 +45,7 @@ export default function HomeHero() {
                 bg: "red.400",
                 zIndex: -1,
               }}
-            >
-              Introducing,
-            </Text>
+            ></Text>
             <br />
             <Text as={"span"} color={"red.400"}>
               Global Hyperloop Competition 2025
@@ -129,14 +127,15 @@ export default function HomeHero() {
                             top={'50%'}
                             transform={'translateX(-50%) translateY(-50%)'}
                         /> */}
-            <Image
-              alt={"Hero Image"}
-              fit={"cover"}
-              align={"center"}
-              w={"100%"}
-              h={"100%"}
-              src={"/home-hero.jpeg"}
-            />
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/tzBII1qi8yY?si=dsENRZAWLOBLONzZ"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
           </Box>
         </Flex>
       </Stack>

@@ -44,7 +44,7 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 export default function FollowWAChannel() {
   const qrCode = useColorModeValue("/wachannel.png", "/wa-dark.png");
   return (
-    <Container maxW={"7xl"} py={12} pb={{ base: 10, md: 20 }} px={8}>
+    <Container maxW={"7xl"} py={8}  px={8}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         spacing={{ base: 10, md: 20 }}
@@ -64,7 +64,7 @@ export default function FollowWAChannel() {
           >
             REGULAR UPDATES
           </Text>
-          <Heading>Follow the GHC Online Club</Heading>
+          <Heading>Join our community </Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
             We are here to collaborate and learn about every aspect of the
             hyperloop technology together. We’re truly excited to show you what we have
