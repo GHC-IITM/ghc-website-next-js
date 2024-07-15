@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Accordion,
@@ -70,12 +70,13 @@ export default function SimpleAccordion() {
           <AccordionItem>
             <AccordionButton
               display="flex"
-              alignItems="center"
+              // alignItems="center"
               justifyContent="space-between"
               p={4}
             >
-              <Text fontSize="xl">
-                What are the other events that will be conducted by GHC in the future?
+              <Text fontSize="xl" textAlign={"left"} pr={4}>
+                What are the other events that will be conducted by GHC in the
+                future?
               </Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
@@ -85,6 +86,23 @@ export default function SimpleAccordion() {
                 track-&-tube in 2024 and conduct the Parivahan Global Hyperloop
                 Competition in 2025. More details will be
                 released with due time.
+              </Text>
+            </AccordionPanel>
+          </AccordionItem>
+          <AccordionItem>
+            <AccordionButton
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+              p={4}
+            >
+              <Text fontSize="xl">How do I take part in GHC events?</Text>
+              <ChevronDownIcon fontSize="24px" />
+            </AccordionButton>
+            <AccordionPanel pb={4}>
+              <Text color="gray.500">
+                We will be releasing a newsletter soon, for now just stay tuned
+                on our socials.
               </Text>
             </AccordionPanel>
           </AccordionItem>

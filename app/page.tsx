@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
+import Subscribe from "../components/Subscribe";
 import HeroSection from "../components/HomeHero";
 import Footer from "../components/Footer";
 import Business from "../components/Business";
@@ -19,7 +20,8 @@ const Home: React.FC<any> = () => {
         <Navbar />
         <HeroSection />
         <Business />
-        <SplitWithImage />
+        {/* <SplitWithImage /> */}
+        <Subscribe />
         <FAQ />
         <Footer />
       </Box>
