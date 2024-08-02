@@ -1,6 +1,8 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
+import iitm_logo from '../../public/Logo.png'
+import SAE from '../../public/Circle SAE.png'
 import {
   Box,
   Flex,
@@ -34,24 +36,12 @@ import useGetTeam from "@/utils/useGetTeam";
 
 const avatars = [
   {
-    name: "Ryan Florence",
-    url: "https://bit.ly/ryan-florence",
+    name: "IITM Logo",
+    url: iitm_logo.src,
   },
   {
-    name: "Segun Adebayo",
-    url: "https://bit.ly/sage-adebayo",
-  },
-  {
-    name: "Kent Dodds",
-    url: "https://bit.ly/kent-c-dodds",
-  },
-  {
-    name: "Prosper Otemuyiwa",
-    url: "https://bit.ly/prosper-baba",
-  },
-  {
-    name: "Christian Nwamba",
-    url: "https://bit.ly/code-beast",
+    name: "SAEINDIA",
+    url: SAE.src,
   },
 ];
 
@@ -443,14 +433,15 @@ export default function JoinOurTeam() {
                   // eslint-disable-next-line react-hooks/rules-of-hooks
                   size={useBreakpointValue({ base: "md", md: "lg" })}
                   position={"relative"}
+                  margin={'0px 12px'}
                   zIndex={2}
                   _before={{
                     content: '""',
                     width: "full",
                     height: "full",
                     rounded: "full",
-                    transform: "scale(1.125)",
-                    bgGradient: "linear(to-bl, red.400,purple.400)",
+                    // transform: "scale(1.125)",
+                    // bgGradient: "linear(to-bl, red.400,purple.400)",
                     position: "absolute",
                     zIndex: -1,
                     top: 0,
