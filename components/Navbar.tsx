@@ -173,7 +173,7 @@ export default function WithSubnavigation() {
                         }}
                         rightIcon={<FaUser />}
                       >
-                        Sign Up
+                        Register
                       </Button>
                     </motion.div>
                   </Link>

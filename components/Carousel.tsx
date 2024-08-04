@@ -1,14 +1,15 @@
-"use client";
+'use client'
 
-import React from "react";
-import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-import Slider from "react-slick";
+import React from 'react';
+import { Box, IconButton, useBreakpointValue } from '@chakra-ui/react';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 
-// Settings for the slider
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
 const settings = {
   dots: true,
   arrows: false,
@@ -28,7 +29,7 @@ export default function Carousel() {
 
   const cards = [
     "/carousel-1.jpg",
-    "/carousel-2.jpg",
+    "/carousel-2.jpeg",
     "/carousel-3.jpg",
     "/carousel-4.jpg",
     "/carousel-5.jpg",
@@ -76,6 +77,7 @@ export default function Carousel() {
         {cards.map((url, index) => (
           <Box
             key={index}
+           
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
@@ -88,3 +90,5 @@ export default function Carousel() {
     </Box>
   );
 }
+
+//Temp Caption for testing

@@ -16,6 +16,7 @@ import { ReactElement } from "react";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
 import { RiFlashlightLine } from "react-icons/ri";
+import NewsLetter from "./Newsletter";
 
 interface FeatureProps {
   text: string;
@@ -42,9 +43,8 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 };
 
 export default function FollowWAChannel() {
-  const qrCode = useColorModeValue("/wachannel.png", "/wa-dark.png");
   return (
-    <Container maxW={"7xl"} py={8} px={8}>
+    <Container maxW={"7xl"} py={12} px={8}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         spacing={{ base: 10, md: 20 }}
@@ -64,7 +64,7 @@ export default function FollowWAChannel() {
           >
             REGULAR UPDATES
           </Text>
-          <Heading>Join our community </Heading>
+          <Heading>Join the club!</Heading>
           <Text color={"gray.500"} fontSize={"lg"}>
             We are here to collaborate and learn about every aspect of the
             hyperloop technology together. We’re truly excited to show you what
@@ -103,19 +103,7 @@ export default function FollowWAChannel() {
           </Stack>
         </Stack>
         <Flex>
-          <Link
-            target="_blank"
-            href={"https://whatsapp.com/channel/0029VaE3RWbBKfhuWzwy8E1H"}
-          >
-            <Image
-              rounded={"md"}
-              alt={"feature image"}
-              src={qrCode}
-              objectFit={"contain"}
-              ml={{ md: "auto" }}
-              h={"80%"}
-            />
-          </Link>
+          <NewsLetter />
         </Flex>
       </SimpleGrid>
     </Container>

@@ -42,7 +42,7 @@ export async function POST(request) {
       return NextResponse.json(
         {
           success: false,
-          message: "Sign Up completed, to edit your details please login.",
+          message: "Registration completed, to edit your details please login.",
         },
         { status: 400 }
       );
