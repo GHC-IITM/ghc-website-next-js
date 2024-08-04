@@ -89,13 +89,13 @@ export default function WithSubnavigation() {
           justify={{ base: "left", md: "start" }}
           alignItems={"center"}
         >
-          <Link href={"/"}>
+          {/* <Link href={"/"}>
             <Image
               src={useColorModeValue("/GHC-LOGO-BLACK.png", "/GHC-logo.png")}
               h={6}
               alt={"Global Hyperloop Competition logo"}
             />
-          </Link>
+          </Link> */}
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
