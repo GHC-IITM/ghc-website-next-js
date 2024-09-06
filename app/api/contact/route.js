@@ -21,6 +21,8 @@ export async function POST(request) {
         });
     
         return NextResponse.json({success:true})
+        // res.status(200).json({ success: true, message: "Form submitted successfully!" });
+
         
     } catch (error) {
         console.error(error)
@@ -29,3 +31,5 @@ export async function POST(request) {
 
 
 }
+
+  
