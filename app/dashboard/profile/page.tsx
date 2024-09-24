@@ -234,9 +234,9 @@ const MobileNav = ({ onOpen, headName, ...rest }: MobileProps) => {
               <Link href={"/dashboard/profile"}>
                 <MenuItem>Profile</MenuItem>
               </Link>
-              <Link href={"/dashboard/settings"}>
+              {/* <Link href={"/dashboard/settings"}>
                 <MenuItem>Settings</MenuItem>
-              </Link>
+              </Link> */}
 
               <MenuDivider />
               <MenuItem onClick={handleLogout}>Sign out</MenuItem>

@@ -27,17 +27,18 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import {
-  FiHome,
+
   // FiTrendingUp,
   FiCompass,
   // FiStar,
   FiSettings,
-  FiMenu,
-  FiBell,
-  FiChevronDown,
-  FiUser,
+ 
+  FiUpload,
+
 } from "react-icons/fi";
 import { IconType } from "react-icons";
+import { FiHome, FiUser, FiChevronDown, FiMenu, FiBell, FiDownload, FiBriefcase, FiBookOpen } from "react-icons/fi"; // Imported required icons
+
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import useGetTeam from "../../utils/useGetTeam";
 // import { useNavigate, Link } from 'react-router-dom'
@@ -69,12 +70,12 @@ interface SidebarProps extends BoxProps {
   onClose: () => void;
 }
 
-const LinkItems: Array<LinkItemProps> = [
+const LinkItems: LinkItemProps[] = [
   { name: "Home", icon: FiHome, url: "/" },
-  { name: "Team Details", icon: TbListDetails, url: "/dashboard" },
-  // { name: "Explore", icon: FiCompass, url: "/about/activity" },
-  // { name: "Settings", icon: FiSettings, url: "/dashboard/settings" },
-  { name: "Profile", icon: FiUser, url: "/dashboard/profile" },
+  { name: "Team Details", icon: FiUser, url: "/dashboard" },
+  { name: "Demonstration", icon: FiDownload, url: "/dashboard/submission1" },
+  { name: "DesignX Blueprint", icon: FiBriefcase, url: "/dashboard/submission2" },
+  { name: "Hyperloop Innoquest", icon: FiBookOpen, url: "/dashboard/submission3" },
 ];
 
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
@@ -144,6 +145,7 @@ const MobileNav = ({ onOpen, headName, ...rest }: MobileProps) => {
   const navigate = useRouter();
   const { colorMode, toggleColorMode } = useColorMode();
   const [team, isLoading] = useGetTeam();
+  console.log(team);
 
   function handleLogout() {
     signOut({ redirect: false });
@@ -231,9 +233,9 @@ const MobileNav = ({ onOpen, headName, ...rest }: MobileProps) => {
               // bg={useColorModeValue('white', 'gray.900')}
               // borderColor={useColorModeValue('gray.200', 'gray.700')}
               >
-                <Link href={"/dashboard/profile"}>
+                {/* <Link href={"/dashboard/profile"}>
                   <MenuItem>Profile</MenuItem>
-                </Link>
+                </Link> */}
                 {/* <Link href={"/dashboard/settings"}>
                   <MenuItem>Settings</MenuItem>
                 </Link> */}

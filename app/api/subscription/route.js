@@ -7,8 +7,7 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
   const body = await request.json();
   const { email } = body;
-  console.log("email in backend", email);
-
+  
   try {
     // check weather user exist or not
 

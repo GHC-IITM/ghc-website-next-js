@@ -244,7 +244,7 @@ const Form4 = ({ setInput, handleImageChange, handleChange, input }: any) => {
         placeholder=""
         type="file"
       /> */}
-      <FormLabel color={"gray.600"}>Choose competetion type</FormLabel>
+      <FormLabel color={"gray.600"}>Choose competition type</FormLabel>
       <CheckboxGroup
         colorScheme="purple"
         value={input.category}

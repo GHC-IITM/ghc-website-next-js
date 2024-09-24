@@ -16,7 +16,7 @@ import { ReactElement } from "react";
 // import { Link } from "react-router-dom";
 import Link from "next/link";
 import { RiFlashlightLine } from "react-icons/ri";
-import NewsLetter from "./NewsLetter";
+import CardWithIllustration from "./CardWithIllustrations"
 
 interface FeatureProps {
   text: string;
@@ -103,7 +103,7 @@ export default function FollowWAChannel() {
           </Stack>
         </Stack>
         <Flex>
-          <NewsLetter />
+          <CardWithIllustration />
         </Flex>
       </SimpleGrid>
     </Container>

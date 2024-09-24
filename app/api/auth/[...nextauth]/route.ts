@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { db } from "../../../../firebase/config";
 import { collection, query, where, getDocs, addDoc } from "firebase/firestore";
 
+
 const handler = NextAuth({
   providers: [
     GoogleProvider({

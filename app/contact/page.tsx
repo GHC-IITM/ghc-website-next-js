@@ -206,7 +206,7 @@ function ContactFormWithSocialButtons() {
                       GHC Head, IIT Madras
                     </Text>
                     <Text color="blue.500" fontSize="xl" >
-                      Conatact - +91 97408 71617
+                      Contact - +91 97408 71617
                     </Text>
                   </Stack>
                 </CardBody>

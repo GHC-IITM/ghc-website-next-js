@@ -97,14 +97,14 @@ const Page = () => {
             <Text as={"span"} color={"red.400"}>
               GHC 2025{" "}
             </Text>
-            <Text as={"span"}>| Competetion Categories</Text>
+            <Text as={"span"}>| Competition Categories</Text>
           </Heading>
         </Stack>
 
         <Container maxW={"7xl"} my={16}>
           <Flex flexWrap="wrap" gridGap={6} justify="space-evenly">
             <Card
-              heading={"Demonstration Competetion"}
+              heading={"Pod Demonstration"}
               icon={<Image src={"/demo_comp.jpg"} alt="demo" w={10} h={10} />}
               description={
                 "Compete with your subscale prototypes systems Run them in our vacuum environment tube, designed to mimic working conditions of full-scale Hyperloop"
@@ -112,7 +112,7 @@ const Page = () => {
               href={"#"}
             />
             <Card
-              heading={"DesignXBluePrint Competetion"}
+              heading={"DesignX BluePrint"}
               icon={
                 <Image src={"/bluePrint.jpg"} alt="bluePrint" w={10} h={10} />
               }
@@ -122,7 +122,7 @@ const Page = () => {
               href={"#"}
             />
             <Card
-              heading={"Case Study Competetion"}
+              heading={"Hyperloop Innoquest"}
               icon={
                 <Image src={"/caseStudy.jpg"} alt="caseStudy" w={10} h={10} />
               }

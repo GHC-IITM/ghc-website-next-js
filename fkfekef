@@ -1,0 +1,379 @@
+[33mcommit db8a555c1894fa1852ea9f3a4d8555af6fb260c5[m[33m ([m[1;36mHEAD -> [m[1;32mashwajit[m[33m, [m[1;32mmain[m[33m)[m
+Merge: 0114d8b 73312c1
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Thu Sep 19 18:40:07 2024 +0530
+
+    Fixed Conflicts
+
+[33mcommit 0114d8bdea92a19d0276e1b7831c1f293d1d6716[m
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Thu Sep 19 18:38:59 2024 +0530
+
+    temo
+
+[33mcommit 73312c14cda91bf51156c4a78261488fd6f0b8f1[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: cd26e65 33d37c5
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Wed Sep 18 13:50:45 2024 +0530
+
+    Merge branch 'main' of https://github.com/GlobalHyperloopCompetition/ghc-website-next-js
+
+[33mcommit 33d37c5309cb26b517a156f02ca1ce2f4e3e7646[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Tue Sep 17 12:48:25 2024 +0530
+
+    fixed spelling
+
+[33mcommit aceb328bbd1f152594e14826fad79757afa5dc84[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Tue Sep 17 12:46:41 2024 +0530
+
+    fixed fetxh user and docs
+
+[33mcommit cd26e65bffe17f1604c1dcdae61b880c1e830d13[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Mon Sep 16 22:32:52 2024 +0530
+
+    update page
+
+[33mcommit e43844c46b98dda6c79d5f71cd95b48b32e8249f[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Mon Sep 16 18:44:58 2024 +0530
+
+    commit
+
+[33mcommit dd6169621788a369fd93b7f0aa333ad8e6731af2[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Mon Sep 16 18:28:04 2024 +0530
+
+    update it
+
+[33mcommit 40b2ab198efcf91d0f6c62778cc408a6f05755a5[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Mon Sep 16 18:22:35 2024 +0530
+
+    admin page
+
+[33mcommit edd44ea692875a9adc6d44ba19faca4b44940993[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Mon Sep 16 17:02:14 2024 +0530
+
+    update newletter
+
+[33mcommit 0af601774a56a3d179baaa0f2588cafbfb0dff87[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Mon Sep 16 00:34:24 2024 +0530
+
+    fixed ui
+
+[33mcommit fb19442faf055153a9bd139d53df6cf4ce60c16a[m
+Merge: 87083d7 abfe966
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Sun Sep 15 22:59:35 2024 +0530
+
+    Categories Page
+
+[33mcommit 87083d7012cc67fe2ff21ed12b14162a0d7018b8[m
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Sun Sep 15 22:55:56 2024 +0530
+
+    Contact us page change
+
+[33mcommit abfe966dd51860e879a7e3dd62bb24f670c9b191[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Sat Sep 14 23:36:18 2024 +0530
+
+    contact form
+
+[33mcommit 3c05df46390825ff82cb5085129894b62dfc672d[m
+Merge: 4c1e4e8 3c043d4
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Sat Sep 14 14:26:45 2024 +0530
+
+    Merge branch 'main' of https://github.com/GlobalHyperloopCompetition/ghc-website-next-js
+
+[33mcommit 3c043d47bbf13728e39c4b374960aff2aff69b4b[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sat Sep 14 12:47:07 2024 +0530
+
+    contact
+
+[33mcommit 17a89d43a531b5beb1cfca2ef54b099c29e63090[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Sep 13 23:57:58 2024 +0530
+
+    added admin route
+
+[33mcommit 4c1e4e827784cda2ae53a3cafbf4a951b494d34c[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Fri Sep 13 23:02:52 2024 +0530
+
+    commit
+
+[33mcommit 3a1a24482cf6c4d31d5a498c48eddee84d6ba987[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Fri Sep 13 22:19:29 2024 +0530
+
+    commit
+
+[33mcommit 2220d9821ad8b9edeadaa59e8e2d250047dd2657[m
+Merge: 6f3e54c 60126bc
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Thu Sep 5 14:13:04 2024 +0530
+
+    Merge branch 'main' of https://github.com/GlobalHyperloopCompetition/ghc-website-next-js
+
+[33mcommit 60126bc9bb64b336489bcf3cc40f8d9bf38dc8cd[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Thu Aug 22 22:29:09 2024 +0530
+
+    fixed r and r uri
+
+[33mcommit 876e44e6de7bf2229fd854a15962cb1a6a949fc7[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Thu Aug 22 22:20:57 2024 +0530
+
+    changed r and r uri
+
+[33mcommit 6f3e54cb26af29925623fc6c8490e5d61e4332fd[m
+Merge: e29f610 63ab756
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Mon Aug 5 23:27:58 2024 +0530
+
+    Merge branch 'main' of https://github.com/GlobalHyperloopCompetition/ghc-website-next-js
+
+[33mcommit 63ab75615722b03088fab0d3720d795dce3f53a3[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Mon Aug 5 23:27:15 2024 +0530
+
+    changed nav
+
+[33mcommit e29f610eae5375cdc9e35c4479a733ef67626491[m
+Merge: 23e998c ab43de6
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Mon Aug 5 01:31:38 2024 +0530
+
+    Sign Up to register
+
+[33mcommit ab43de6daacfcbf5ed182a9e43ce6e0e44f8848a[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Aug 2 17:33:07 2024 +0530
+
+    fixed signup and home
+
+[33mcommit 23e998c8ae82c046fa0de008bec051301705eda2[m
+Merge: 015bec7 2d769a2
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Fri Aug 2 17:12:49 2024 +0530
+
+    Updated sign up page
+
+[33mcommit 015bec70d574c3dbd0af009ebb4d119bda4fa0cd[m
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Fri Aug 2 16:39:07 2024 +0530
+
+    Changed the sign up pages
+
+[33mcommit 2d769a212b93eb43b9b6c2bf069019dcce988b80[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sun Jul 28 19:47:11 2024 +0530
+
+    added subscribe to newsletter
+
+[33mcommit 77f461978cbaf4f18168294be4e4521651bb1673[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sun Jul 28 19:44:46 2024 +0530
+
+    added subscribe to newsletter
+
+[33mcommit ac0ec56629e1ac0d3747422de05ee9755ad6b670[m
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Sun Jul 28 02:45:47 2024 +0530
+
+    Added frontend for Newsletter
+
+[33mcommit 7d526aa10dc4feda489ab3359899133b46162215[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sat Jul 20 22:17:48 2024 +0530
+
+    fixed carousel
+
+[33mcommit 2cbeee8dfbbd76cb368b00ca88e3e4d530fa1109[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sat Jul 20 22:15:04 2024 +0530
+
+    Remove carousel
+
+[33mcommit 57ce54477e0037534a1df1624404f51bbfcf376e[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sat Jul 20 22:08:16 2024 +0530
+
+    fixed import error
+
+[33mcommit 96e9433170203e094f5f3c8223f56b70fd16b053[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sat Jul 20 21:38:37 2024 +0530
+
+    fixed carousel
+
+[33mcommit a2c4ef7780e32c27ac73a5fe21ff1eaa11519258[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sat Jul 20 21:12:16 2024 +0530
+
+    fixed carousel
+
+[33mcommit 3ed9c19da5ff03f789d9bf1d7c94b77ca1c9f794[m
+Merge: 8547d51 1eac236
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sat Jul 20 20:57:47 2024 +0530
+
+    Merge branch 'main' of https://github.com/GHC-IITM/ghc-website-next-js
+
+[33mcommit 1eac23653e25d52b7ac3e7f7af1cf79c31f91030[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Sat Jul 20 18:00:05 2024 +0530
+
+    add
+
+[33mcommit 2ad5539c58fbff0aa7feae0a79cb6a470b58af46[m
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Fri Jul 19 21:30:26 2024 +0530
+
+    Fixed Carousel
+
+[33mcommit d218cf4c28eb9e0f2bde28b6f18bb4569888d7bd[m
+Merge: ef1eb6b 5f7fa58
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Fri Jul 19 21:28:20 2024 +0530
+
+    Merge branch 'main' of https://github.com/AST0008/ghc-website-next-js
+
+[33mcommit ef1eb6bdd4553ab7e9b51fb2ca4d74686da3a377[m
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Fri Jul 19 21:24:04 2024 +0530
+
+    Fixed Carousel
+
+[33mcommit 5f7fa58cbb808991275b6dc0fbb75feb7384313a[m
+Merge: 1194999 8547d51
+Author: Ashwajit Tayade <143830881+AST0008@users.noreply.github.com>
+Date:   Thu Jul 18 23:06:28 2024 +0530
+
+    Merge branch 'main' into main
+
+[33mcommit 1194999132952055d287dd91285eb36ace014a4d[m
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Thu Jul 18 22:15:28 2024 +0530
+
+    Changed Caption for testing
+
+[33mcommit 8547d51a04c62ee31a7f3a734b1d4e84d74394cb[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Wed Jul 17 19:53:14 2024 +0530
+
+    fixed module import issues
+
+[33mcommit 5871455671cc1e08b8f2b6ce099d34f336c77c2e[m
+Merge: fe001ae 7089652
+Author: Global Hyperloop Competition <ghc@smail.iitm.ac.in>
+Date:   Wed Jul 17 19:17:51 2024 +0530
+
+    Merge pull request #1 from AST0008/main
+    
+    Added Carousel in events
+
+[33mcommit 7089652f9bea68fd188afd0f6b9f2ad397b8b0d1[m
+Author: AST <ashwajittayade30@gmail.com>
+Date:   Wed Jul 17 17:39:41 2024 +0530
+
+    Added Carousel in events
+
+[33mcommit fe001aeeb18373586f754281ae52228d595fef18[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Wed Jul 17 11:48:05 2024 +0530
+
+    fixed home page --ashwajit
+
+[33mcommit 13a76334e1e3588979101b064630ad7557a99f0c[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Sun Jul 14 10:23:24 2024 +0530
+
+    login, sign up, dashboard imporvements
+
+[33mcommit 704d7271bbccd4932035f12e70f78810756d7104[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Jul 12 13:48:42 2024 +0530
+
+    Rename to correct case sensitivity
+
+[33mcommit 62bd65f49574ea4588322e0a950030bde82bd81c[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Jul 12 13:48:28 2024 +0530
+
+    Temporary rename for case sensitivity fix
+
+[33mcommit ff76450082b93e9de99ff9d7bf99c6f3bdaf5163[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Jul 12 13:43:40 2024 +0530
+
+    fixes
+
+[33mcommit 9de47447e8d473e85bd3664aa44400b24df0439d[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Jul 12 13:42:22 2024 +0530
+
+    fixes
+
+[33mcommit 3ca4a56295bddf40e57f74d293c10adb391ccd9e[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Jul 12 12:35:56 2024 +0530
+
+    fixes
+
+[33mcommit 445de609bf088d322ccc4dd08505ac5138bcf8e8[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Jul 12 12:05:00 2024 +0530
+
+    fixes
+
+[33mcommit 512d76baaf89e3bea2bb3c31a7a228a331c0536d[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Jul 12 11:10:08 2024 +0530
+
+    dashboard partly done
+
+[33mcommit 5d10e195f2265d72518b18fc55422551c387f20a[m
+Author: lorstenoplo <nishanthdipali@gmail.com>
+Date:   Fri Jul 12 09:46:05 2024 +0530
+
+    login and sign up working
+
+[33mcommit 5a216d8d8780155fa7b36a15a0727188e15bb35a[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Wed Jul 10 14:47:28 2024 +0530
+
+    commit
+
+[33mcommit ef5fa00a86055e431c6e074a19e45ede9da2b9da[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Wed Jul 10 13:04:13 2024 +0530
+
+    authentication
+
+[33mcommit 96c2d571ef3b7391b601af18fde03290e4e57956[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Thu Jun 27 13:35:24 2024 +0530
+
+    next js auth
+
+[33mcommit 30614196e9d35946b7ac80ba8520cbb5e2f50e42[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Tue Jun 4 12:52:16 2024 +0530
+
+    commit changes
+
+[33mcommit 64dc6e383e42f5d9f67bbf77471e962a2b238fa6[m
+Author: Narmi002 <shaiknarmi002@gmail.com>
+Date:   Mon Jun 3 18:07:01 2024 +0530
+
+    Initial commit from Create Next App

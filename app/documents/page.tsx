@@ -78,6 +78,39 @@ const Documents = () => {
             >
               <Box
                 as="time"
+                dateTime="2024-09-22T12:22:00Z"
+                color={useColorModeValue("gray.500", "gray.400")}
+              >
+                {timeDifference("2024-09-22T12:22:00Z")}
+              </Box>
+              <Heading size="md" my={2}>
+                <LinkOverlay
+                  href="https://ghc-document.s3.ap-south-1.amazonaws.com/RDS+Template.pptx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color={useColorModeValue("teal.500", "teal.300")}
+                >
+                  RDS Template
+                </LinkOverlay>
+              </Heading>
+              <Text color={useColorModeValue("gray.600", "gray.300")}>
+                GLOBAL HYPERLOOP COMPETITION 2025
+              </Text>
+            </LinkBox>
+
+            <LinkBox
+              as="article"
+              maxW="sm"
+              p={5}
+              borderWidth={10}
+              rounded="lg"
+              shadow="md"
+              bg={useColorModeValue("white", "gray.700")}
+              transition="transform 0.2s"
+              _hover={{ transform: "scale(1.05)" }}
+            >
+              <Box
+                as="time"
                 dateTime="2024-09-17T12:22:00Z"
                 color={useColorModeValue("gray.500", "gray.400")}
               >
