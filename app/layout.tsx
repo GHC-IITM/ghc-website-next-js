@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Global Hyperloop Competition",
   description:
     "Welcome to the Global Hyperloop Competition - a cutting-edge challenge that brings together innovators, engineers, and visionaries from around the world to revolutionize transportation. Join us in pushing the boundaries of high-speed, sustainable travel. #HyperloopInnovation",
+  icons:{
+    icon:'/favicon.jpg'
+  }
 };
 
 export default function RootLayout({

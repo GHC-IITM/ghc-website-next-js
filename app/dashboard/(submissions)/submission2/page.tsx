@@ -250,7 +250,6 @@ const Submissions = () => {
 
         const downloadURL = await getDownloadURL(snapshot.ref);
         console.log(`File available at: ${downloadURL}`);
-
         return downloadURL;
       } catch (error) {
         console.error("Error uploading file:", error);

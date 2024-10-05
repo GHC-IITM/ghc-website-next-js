@@ -1,7 +1,9 @@
-import NextAuth from "next-auth";
+import NextAuth, { DefaultSession } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { db } from "../../../../firebase/config";
-import { collection, query, where, getDocs, addDoc } from "firebase/firestore";
+import { collection, query, where,getDoc, getDocs, addDoc,doc } from "firebase/firestore";
+import { Session, User } from "next-auth"; // Import necessary types
+
 
 
 const handler = NextAuth({
