@@ -81,7 +81,10 @@ import { addDoc, collection, getDocs, query, where } from "firebase/firestore";
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { email, demonstrationFileUrl, designFileUrl } = body;
+    const { email,files}=body
+    const { demonstrationFile, design,cdr,pds,technology, network,business} = files;
+
+    
 
     // Query Firestore to find the user based on email
     const userDb = collection(db, "users");
@@ -95,20 +98,45 @@ export async function POST(req) {
     // Get the first user's data
     const userDetails = getUser.docs.map((doc) => doc.data())[0];
     const { teamname, uid } = userDetails;
-    console.log("User details:", userDetails);
+    // console.log("User details:", userDetails);
 
-    const submissionType = demonstrationFileUrl ? "demonstration" : "design";
+    // const submissionType = demonstrationFileUrl ? "demonstration" : "design";
 
     // Save the file URLs in Firestore
-    const userFileDb = collection(db, "submissions");
     const data = {
       email: email,
       teamname: teamname,
       uid: uid,
-      ...(demonstrationFileUrl && { demonstrationfile: demonstrationFileUrl }),
-      ...(designFileUrl && { designfile: designFileUrl }),
       created_at: new Date().toISOString(),
     };
+
+    // Explicitly add the file URLs to the data object if they exist
+    if (demonstrationFile) {
+      data.demonstrationFile = demonstrationFile;
+    }
+    if (design) {
+      data.designfile = design;
+    }
+    if (cdr) {
+      data.cdr = cdr;
+    }
+    if (pds) {
+      data.pds = pds;
+    }
+    if (technology) {
+      data.technology = technology;
+    }
+    if (network) {
+      data.network = network;
+    }
+    if (business) {
+      data.business = business;
+    }
+
+    console.log("data :",data);
+    
+    
+    const userFileDb = collection(db, "submissions");
 
     const submittedDoc = await addDoc(userFileDb, data);
     console.log("File URLs saved successfully:", submittedDoc.id);

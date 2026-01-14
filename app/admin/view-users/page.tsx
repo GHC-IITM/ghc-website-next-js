@@ -19,6 +19,7 @@ interface User {
   activemembers?: string;
   postalcode?: string;
   attendeventmembers?: string;
+  teamrepresentetive?:string;
 }
 
 const AdminViewUsers = () => {
@@ -63,6 +64,7 @@ const AdminViewUsers = () => {
       "country",
       "category",
       "homeUniversity",
+      "teamrepresentetive",
       "teamname",
       "activemembers",
       "postalcode",
@@ -114,16 +116,16 @@ const AdminViewUsers = () => {
               <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead className="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
-                    <th scope="col" className="px-3 py-3">Sl</th>
-                    <th scope="col" className="px-3 py-3">Image</th>
-                    <th scope="col" className="px-3 py-3">Team</th>
-                    <th scope="col" className="px-3 py-3">University</th>
-                    <th scope="col" className="px-3 py-3">Team Rep</th>
-                    <th scope="col" className="px-3 py-3">Members</th>
-                    <th scope="col" className="px-3 py-3">Country</th>
-                    <th scope="col" className="px-3 py-3">Name</th>
-                    <th scope="col" className="px-3 py-3">Phone</th>
-                    <th scope="col" className="px-3 py-3">Email</th>
+                    <th scope="col" className="px-2 py-3">Sl</th>
+                    <th scope="col" className="px-2 py-3">Image</th>
+                    <th scope="col" className="px-2 py-3">Team Name</th>
+                    <th scope="col" className="px-2 py-3">University</th>
+                    <th scope="col" className="px-2 py-3">Team Rep</th>
+                    <th scope="col" className="px-2 py-3">Members</th>
+                    <th scope="col" className="px-2 py-3">Country</th>
+                    <th scope="col" className="px-2 py-3">Name</th>
+                    <th scope="col" className="px-2 py-3">Phone</th>
+                    <th scope="col" className="px-2 py-3">Email</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -138,13 +140,14 @@ const AdminViewUsers = () => {
                           height="50"
                         />
                       </td>
-                      <td className="px-3 py-4">{entry.teamname}</td>
-                      <td className="px-3 py-4">{entry.homeUniversity}</td>
-                      <td className="px-3 py-4">{entry.activemembers}</td>
-                      <td className="px-3 py-4">{entry.country}</td>
-                      <td className="px-3 py-4">{entry.name}</td>
-                      <td className="px-3 py-4">{entry.phone}</td>
-                      <td className="px-3 py-4">{entry.email}</td>
+                      <td className="px-2 py-4">{entry.teamname}</td>
+                      <td className="px-2 py-4">{entry.homeUniversity}</td>
+                      <td className="px-2 py-4">{entry.teamrepresentetive}</td>
+                      <td className="px-2 py-4">{entry.activemembers}</td>
+                      <td className="px-2 py-4">{entry.country}</td>
+                      <td className="px-2 py-4">{entry.name}</td>
+                      <td className="px-2 py-4">{entry.phone}</td>
+                      <td className="px-2 py-4">{entry.email}</td>
                     </tr>
                   ))}
                 </tbody>

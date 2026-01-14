@@ -51,7 +51,7 @@ export default function HomeHero() {
             mt={1}
           >
             <CiCalendar className="mr-4" />
-            Feb 2025,
+            Jan 2026,
           </Text>
           <Text
             as={"span"}
@@ -69,6 +69,25 @@ export default function HomeHero() {
             creativity, accelerate breakthroughs, and be a part of the
             revolution!
           </Text>
+          <Stack mt={6} direction={{ base: "column", sm: "row" }}>
+            <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
+              Take a look at {"   "}
+              <Link href="/gallery" passHref>
+                <Button
+                  rounded="xl"
+                  size="lg"
+                  fontWeight="bold"
+                  px={6}
+                  colorScheme="red"
+                  bg="red.400"
+                  _hover={{ bg: "red.500" }}
+                  mx={4}
+                >
+                  GHC 2025
+                </Button>
+              </Link>
+            </motion.div>
+          </Stack>
         </Stack>
 
         <Flex
@@ -106,89 +125,6 @@ export default function HomeHero() {
           </Box>
         </Flex>
       </Stack>
-
-      <Box
-        mt={10}
-        mx="auto"
-        bg={useColorModeValue("gray.50", "gray.700")}
-        rounded="md"
-        shadow="md"
-      >
-        <Stack
-          spacing={{ base: 8, md: 10 }}
-          textAlign={"center"}
-          align={"center"}
-          py={{ base: 8, md: 16 , xl: 8 }}
-        >
-          {/* Heading and Subheading */}
-          <Heading
-            lineHeight={1.2}
-            fontWeight={600}
-            fontSize={{ base: "3xl", sm: "4xl", lg: "5xl" }}
-          >
-            <Text as={"span"}>Register Now</Text>
-          </Heading>
-          <Text color={"gray.500"} fontSize={{ base: "md", lg: "lg" }}>
-            Be part of an exclusive community that drives the future of
-            transportation!
-          </Text>
-
-          <Text
-            fontSize={"xl"}
-            color={useColorModeValue("gray.700", "gray.300")}
-            fontWeight={500}
-          >
-            Exclusive Benefits Include:
-          </Text>
-
-          {/* List of Benefits */}
-          <List spacing={3} textAlign="left" mx="auto" maxW="4xl">
-            <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.2 }}>
-              <ListItem height={10} fontSize={"xl"} borderRadius={10}>
-                <ListIcon as={CheckCircleIcon} color="green.400" />
-                Free participation and industry updates
-              </ListItem>
-            </motion.div>
-            <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.2 }}>
-              <ListItem height={10} fontSize={"xl"} borderRadius={10}>
-                <ListIcon as={CheckCircleIcon} color="green.400" />
-                Regular Updates to cutting-edge Hyperloop research
-              </ListItem>
-            </motion.div>
-            <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.2 }}>
-              <ListItem height={10} fontSize={"xl"} borderRadius={10}>
-                <ListIcon as={CheckCircleIcon} color="green.400" />
-                Exclusive acess To GHC Wiki
-              </ListItem>
-            </motion.div>
-          </List>
-
-          {/* Divider */}
-          <Box borderBottom="2px solid" borderColor="gray.200" w="40%" />
-
-          {/* Register Button */}
-          <motion.div whileTap={{ scale: 0.95 }} whileHover={{ scale: 1.05 }}>
-            <Link href={"/signup"}>
-              <Button
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"bold"}
-                px={6}
-                colorScheme={"red"}
-                bg={"red.400"}
-                _hover={{ bg: "red.500" }}
-              >
-                Register Now
-              </Button>
-            </Link>
-          </motion.div>
-
-          <Text fontSize={"lg"} color={"gray.500"} maxW={"3xl"}>
-            "The Global Hyperloop Competition is the future of transportation
-            innovation. Join us and be a part of this revolution!"
-          </Text>
-        </Stack>
-      </Box>
     </Container>
   );
 }

@@ -1,161 +1,320 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import {
   Box,
   Button,
-  Input,
   Text,
-  Flex,
   VStack,
-  useDisclosure,
-  CloseButton,
-  Image,
-  useColorModeValue,
   Heading,
   HStack,
   Divider,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
+  FormControl,
+  FormLabel,
+  Input,
+  Spinner,
+  useToast,
 } from "@chakra-ui/react";
-import { FiHome, FiUser, FiChevronDown, FiBriefcase, FiDownload, FiBookOpen } from "react-icons/fi";
-import Link from "next/link";
-import { useSession } from "next-auth/react";
+
 import useGetTeam from "../../../../utils/useGetTeam";
-
-interface LinkItemProps {
-  name: string;
-  icon: React.ComponentType;
-  url?: string;
-  hasDropdown?: boolean; // Added flag for dropdown items
-}
-
-const LinkItems: LinkItemProps[] = [
-  { name: "Home", icon: FiHome, url: "/" },
-  { name: "Team Details", icon: FiUser, url: "/dashboard" },
-  { name: "Demonstration", icon: FiDownload, url: "/dashboard/submission1" },
-  { name: "DesignX Blueprint", icon: FiBriefcase, url: "/dashboard/submission2" },
-  { name: "Hyperloop Innoquest", icon: FiBookOpen, url: "/dashboard/submission3" },
-];
-
-const SidebarContent = ({ onClose }: { onClose: () => void }) => (
-  <Box
-    bg={useColorModeValue("white", "gray.900")}
-    borderRight="1px"
-    borderRightColor={useColorModeValue("gray.200", "gray.700")}
-    w={{ base: "full", md: 60 }}
-    pos="fixed"
-    h="full"
-  >
-    <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-      <Link href="/">
-        <Image
-          src={useColorModeValue("/GHC-LOGO-gray.900.png", "/GHC-logo.png")}
-          h={6}
-          alt="GHC_logo"
-        />
-      </Link>
-      <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
-    </Flex>
-
-    {LinkItems.map((link) =>
-      link.hasDropdown ? (
-        <Menu key={link.name}>
-          <MenuButton as={Button} rightIcon={<FiChevronDown />} mx="4" mt="2">
-            {link.name}
-          </MenuButton>
-          <MenuList>
-            <Link href="/dashboard/submission1">
-              <MenuItem>Demonstration</MenuItem>
-            </Link>
-            <Link href="/dashboard/submission2">
-              <MenuItem>DesignX Blueprint</MenuItem>
-            </Link>
-            <Link href="/dashboard/submission3">
-              <MenuItem>Hyperloop Innoquest</MenuItem>
-            </Link>
-          </MenuList>
-        </Menu>
-      ) : (
-        <Link key={link.name} href={link.url || "/"}>
-          <NavItem icon={link.icon}>{link.name}</NavItem>
-        </Link>
-      )
-    )}
-  </Box>
-);
-
-const NavItem = ({
-  icon: Icon,
-  children,
-}: {
-  icon: React.ComponentType;
-  children: React.ReactNode;
-}) => (
-  <Flex
-    align="center"
-    p="4"
-    mx="4"
-    borderRadius="lg"
-    cursor="pointer"
-    _hover={{ bg: "teal.500", color: "white" }}
-    transition="background-color 0.2s ease-in-out"
-  >
-    {Icon && <Icon style={{ marginRight: "8px" }} />}
-    {children}
-  </Flex>
-);
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { app } from "../../../../firebase/config";
 
 const Submissions = () => {
-  const { onClose } = useDisclosure();
+  const storage = getStorage(app);
+  const [techfile, settechfile] = useState<File | null>(null);
+  const [netfile, setnetfile] = useState<File | null>(null);
+  const [busfile, setbusfile] = useState<File | null>(null);
   const [team] = useGetTeam();
-  const { data: session } = useSession();
-  const [file1, setFile1] = useState<File | null>(null);
-  const [file2, setFile2] = useState<File | null>(null);
-  const [file3, setFile3] = useState<File | null>(null);
+  const [loading, setLoading] = useState(false);
+  const toast = useToast();
 
-  const handleFileChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    setFile: React.Dispatch<React.SetStateAction<File | null>>
-  ) => {
-    if (event.target.files && event.target.files.length > 0) {
-      setFile(event.target.files[0]);
+  const uploadFile = async (file: File | null, folderName: string) => {
+    if (!file) return null;
+
+    const fileId = uuidv4();
+    try {
+      const fileRef = ref(
+        storage,
+        `submissions/${folderName}/${team?.uid}/${fileId}`
+      );
+      const snapshot = await uploadBytes(fileRef, file);
+      return await getDownloadURL(snapshot.ref);
+    } catch (error) {
+      console.error(`Error uploading ${folderName} file:`, error);
+      alert(`Failed to upload ${folderName} file`);
+      return null;
     }
   };
 
-  return (
-    <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
-      <SidebarContent onClose={onClose} />
-      <VStack spacing={6} ml={{ base: 0, md: 60 }} p="8">
-        <Heading as="h1" size="xl" mb={4}>
-          Submission Dashboard
-        </Heading>
-        <Divider />
-        <Box flexDirection={{ base: "column", md: "row" }}>
-          <Heading
-            as="h2"
-            size="lg"
-            mx="auto"
-            textAlign="center"
-            fontWeight="semibold"
-            mb={4}
-            color="teal.500"
-          >
-            Hyperloop Innoquest
-          </Heading>
-        </Box>
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.900", "gray.100")}
-        >
-          Submissions for Hyperloop Innoquest will start soon.
-        </Text>
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setLoading(true);
 
-        {/* Placeholder when no submissions are uploaded */}
-      </VStack>
-    </Box>
+  //   try {
+  //     const urls = await Promise.all([
+  //       handleUpload(file1, "technical"),
+  //       handleUpload(file2, "network"),
+  //       handleUpload(file3, "business"),
+  //     ]);
+
+  //     if (urls.some((url) => url === null)) {
+  //       throw new Error("Some files failed to upload");
+  //     }
+
+  //     const response = await fetch("/api/filesubmission", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         email: team?.email,
+  //         files: {
+  //           technical: urls[0],
+  //           network: urls[1],
+  //           business: urls[2],
+  //         },
+  //       }),
+  //     });
+
+  //     if (!response.ok) {
+  //       throw new Error("Failed to submit files");
+  //     }
+
+  //     toast({
+  //       title: "Submission Successful",
+  //       description: "Your files have been uploaded successfully!",
+  //       status: "success",
+  //       duration: 4000,
+  //       isClosable: true,
+  //     });
+  //   } catch (error) {
+  //     console.error("Submission Error:", error);
+  //     toast({
+  //       title: "Submission Failed",
+  //       description: "Please try again later.",
+  //       status: "error",
+  //       duration: 4000,
+  //       isClosable: true,
+  //     });
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true); // Set loading state to true
+    let uploadedFiles = [];  // Track which files were uploaded successfully
+
+
+    const [techurl,neturl,busurl] = await Promise.all([
+      uploadFile(techfile, "technical"),
+      uploadFile(netfile, "network"),
+      uploadFile(busfile, "business"),
+
+    ])
+    
+    if (techfile) {
+      try {
+        // Assuming cdrUrl is already available from the upload function
+        const response = await fetch("/api/filesubmission", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: team?.email,
+            files: {
+              technology: techurl,  // Pass the CDR file URL here
+            },
+          }),
+        });
+
+        // Check if the response is successful
+        if (!response.ok) {
+          throw new Error(`Failed to upload technology file. Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // Check if the server returned a success flag
+        if (!data.success) {
+          throw new Error(`Server failed to upload technology file. Message: ${data.message || 'Unknown error'}`);
+        }
+
+        uploadedFiles.push("technology file");
+
+        // alert("CDR file uploaded successfully!");
+      } catch (error) {
+        console.error("Error uploading technology file:", error);
+        alert(`Failed to upload technology file. Error`);
+      } finally {
+        setLoading(false); // Always reset loading state
+      }
+    }
+
+    if (netfile) {
+      try {
+        // Assuming cdrUrl is already available from the upload function
+        const response = await fetch("/api/filesubmission", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: team?.email,
+            files: {
+              network: neturl,  // Pass the CDR file URL here
+            },
+          }),
+        });
+
+        // Check if the response is successful
+        if (!response.ok) {
+          throw new Error(`Failed to upload Network file. Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // Check if the server returned a success flag
+        if (!data.success) {
+          throw new Error(`Server failed to upload Network file. Message: ${data.message || 'Unknown error'}`);
+        }
+
+        // alert("demonstration file uploaded successfully!");
+        uploadedFiles.push("Network file");
+
+      } catch (error) {
+        console.error("Error uploading Network file:", error);
+        alert(`Failed to upload Network file. Error`);
+      } finally {
+        setLoading(false); // Always reset loading state
+      }
+
+    }
+
+
+    if (busfile) {
+      try {
+
+        const response = await fetch("/api/filesubmission", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: team?.email,
+            files: {
+              business: busurl,  // Pass the CDR file URL here
+            },
+          }),
+        });
+    
+        // Check if the response is successful
+        if (!response.ok) {
+          throw new Error(`Failed to upload business file. Status: ${response.status}`);
+        }
+    
+        const data = await response.json();
+    
+        // Check if the server returned a success flag
+        if (!data.success) {
+          throw new Error(`Server failed to upload business file. Message: ${data.message || 'Unknown error'}`);
+        }
+    
+        // alert("demonstration file uploaded successfully!");
+        uploadedFiles.push("business file");
+    
+      } catch (error) {
+        console.error("Error uploading business file:", error);
+        alert(`Failed to upload business file. Error`);
+      } finally {
+        setLoading(false); // Always reset loading state
+      }
+
+    }
+    if (uploadedFiles.length === 3) {
+      alert("All files uploaded successfully!");
+    } else if (uploadedFiles.length > 0) {
+      const uploadedFilesList = uploadedFiles.join(", ");
+      alert(`The following file(s) uploaded successfully: ${uploadedFilesList}`);
+    } else {
+      alert("No files uploaded successfully.");
+    }
+    
+
+
+
+  };
+
+  return (
+    <VStack spacing={6} p={8}>
+      <Heading as="h1" size="lg">
+        Submission Dashboard
+      </Heading>
+      <Divider />
+      <Heading as="h1" size="lg" fontWeight="semibold" color="teal.500">
+        Hyperloop Innoquest
+      </Heading>
+      <Box
+        w="full"
+        maxW="600px"
+        bg={"gray.700"}
+        boxShadow="lg"
+        p={6}
+        borderRadius="md"
+      >
+        <Heading as="h4" size="md" marginBottom={4}>
+          Solution Proposal Document (SPD)
+        </Heading>
+        <form onSubmit={handleSubmit}>
+          <VStack spacing={6}>
+            <FormControl>
+              <FormLabel>Technical </FormLabel>
+              <Input
+                type="file"
+                accept=".pdf"
+                onChange={(e) => settechfile(e.target.files?.[0] || null)}
+                variant="flushed"
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Hyperloop Network</FormLabel>
+              <Input
+                type="file"
+                accept=".pdf"
+                onChange={(e) => setnetfile(e.target.files?.[0] || null)}
+                variant="flushed"
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Business & Social Impact</FormLabel>
+              <Input
+                type="file"
+                accept=".pdf"
+                onChange={(e) => setbusfile(e.target.files?.[0] || null)}
+                variant="flushed"
+              />
+            </FormControl>
+            <Text fontSize="sm" color="gray.500">
+              Note: Please upload files in PDF format only.
+            </Text>
+            <Button
+              type="submit"
+              colorScheme="teal"
+              isLoading={loading}
+              loadingText="Submitting"
+              w="full"
+              mt={4}
+            >
+              {loading ? <Spinner /> : "Submit"}
+            </Button>
+          </VStack>
+        </form>
+      </Box>
+    </VStack>
   );
 };
 

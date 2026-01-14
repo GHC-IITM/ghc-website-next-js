@@ -119,7 +119,7 @@ function ContactFormWithSocialButtons() {
       body: JSON.stringify(input),
     });
     // const res = await mutation.mutateAsync(values);
-    const json=await res.json()
+    const json = await res.json();
     if (json.success) {
       onOpen();
       setLoading(false);
@@ -193,32 +193,37 @@ function ContactFormWithSocialButtons() {
                     height="200px"
                     width="200px"
                     objectFit="cover"
-                    src="/harsha.jpg"
-                    alt="Harsha"
+                    src="/hemant.jpg"
+                    alt="Hemant"
                     borderRadius="lg"
                   />
 
                   <Stack mt="6" spacing="3" textAlign="center" align="center">
                     <Heading size="lg" fontWeight="bold">
-                      Harsha
+                      Hemant Meena
                     </Heading>
                     <Text fontWeight="medium" color="gray.600">
                       GHC Head, IIT Madras
                     </Text>
-                    <Text color="blue.500" fontSize="xl" >
-                      Contact - +91 97408 71617
+                    <Text color="blue.500" fontSize="xl">
+                      Contact - +91 89059 27132
                     </Text>
                   </Stack>
                 </CardBody>
                 <Divider />
                 <CardFooter>
                   <ButtonGroup spacing="2">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                    <Link
+                      href="https://www.linkedin.com/in/hemant-meena-3868702b4/"
+                      target="_blank"
                     >
-                      <Button colorScheme="teal">LinkedIn</Button>
-                    </motion.div>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Button colorScheme="teal">LinkedIn</Button>
+                      </motion.div>
+                    </Link>
                   </ButtonGroup>
                 </CardFooter>
               </Card>
@@ -230,32 +235,37 @@ function ContactFormWithSocialButtons() {
                     height="200px"
                     width="200px"
                     objectFit="cover"
-                    src="/sayan.jpg"
+                    src="/fake.jpeg"
                     alt="Sayan"
                     borderRadius="lg"
                   />
 
                   <Stack mt="6" spacing="3" textAlign="center" align="center">
                     <Heading size="lg" fontWeight="bold">
-                      Sayan Majumder
+                      Prem Mukkannavar
                     </Heading>
                     <Text fontWeight="medium" color="gray.600">
                       GHC Head, IIT Madras
                     </Text>
                     <Text color="blue.500" fontSize="xl">
-                      Contact - +91 81489 00761
+                      Contact - +91 73378 73507
                     </Text>
                   </Stack>
                 </CardBody>
                 <Divider />
                 <CardFooter>
                   <ButtonGroup spacing="2">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                    <Link
+                      href="https://www.linkedin.com/in/prem-mukkannavar-2bb038257/"
+                      target="_blank"
                     >
-                      <Button colorScheme="teal">LinkedIn</Button>
-                    </motion.div>
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Button colorScheme="teal">LinkedIn</Button>
+                      </motion.div>
+                    </Link>
                   </ButtonGroup>
                 </CardFooter>
               </Card>
@@ -267,34 +277,37 @@ function ContactFormWithSocialButtons() {
                     height="200px"
                     width="200px"
                     objectFit="cover"
-                    src="/pranav.jpg"
+                    src="/fake.jpeg"
                     alt="Pranav"
                     borderRadius="lg"
                   />
 
                   <Stack mt="6" spacing="3" textAlign="center" align="center">
                     <Heading size="lg" fontWeight="bold">
-                      Pranav Singhal
+                      Shubhankit Tewari
                     </Heading>
                     <Text fontWeight="medium" color="gray.600">
                       GHC Head, IIT Madras
                     </Text>
                     <Text color="blue.500" fontSize="xl">
-                      Contact - +91 99270 32865
+                      Contact - +91 88517 88470
                     </Text>
                   </Stack>
                 </CardBody>
                 <Divider />
                 <CardFooter>
                   <ButtonGroup spacing="2">
-                    <Link href="https://www.linkedin.com/in/pranav-singhal-81ba30223/">
-                    <motion.div
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                    <Link
+                      href="https://www.linkedin.com/in/shubhankit-tewari-4599202a0/"
+                      target="_blank"
                     >
-                      <Button colorScheme="teal">LinkedIn</Button>
-                    </motion.div>
-                    </Link> 
+                      <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Button colorScheme="teal">LinkedIn</Button>
+                      </motion.div>
+                    </Link>
                   </ButtonGroup>
                 </CardFooter>
               </Card>

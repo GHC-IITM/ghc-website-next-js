@@ -4,14 +4,19 @@ import React, { useEffect, useState } from "react";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../../../firebase/config";
 
-interface User {
-    id: string;
-    email: string;
-    uid: string;
-    teamname?: string;
-    designfile?: string;
-    demonstrationfile?: string;
-}
+    interface User {
+        id: string;
+        email: string;
+        uid: string;
+        teamname?: string;
+        designfile?: string;
+        demonstrationfile?: string;
+        pds?: string;
+        cdr?: string;
+        technology?: string;
+        business?: string;
+        network?: string;
+    }
 
 const AdminViewUsers = () => {
     const [entries, setEntries] = useState<User[]>([]);
@@ -35,6 +40,11 @@ const AdminViewUsers = () => {
                     ...groupedUsers[user.uid],
                     designfile: user.designfile || groupedUsers[user.uid].designfile,
                     demonstrationfile: user.demonstrationfile || groupedUsers[user.uid].demonstrationfile,
+                    pds: user.pds || groupedUsers[user.uid].pds,
+                    cdr: user.cdr || groupedUsers[user.uid].cdr,
+                    technology: user.technology || groupedUsers[user.uid].technology,
+                    business: user.business || groupedUsers[user.uid].business,
+                    network: user.network || groupedUsers[user.uid].network
                 };
             }
         });
@@ -54,6 +64,9 @@ const AdminViewUsers = () => {
 
             const groupedUsers = groupUsers(fetchedUsers);
             setEntries(groupedUsers);
+            console.log(groupedUsers);
+            
+            
         });
 
         return () => unsubscribe();
@@ -107,9 +120,15 @@ const AdminViewUsers = () => {
                             <tr>
                                 <th scope="col" className="px-3 py-3">Sl</th>
                                 <th scope="col" className="px-3 py-3">Team Name</th>
-                                <th scope="col" className="px-3 py-3">Email</th>
                                 <th scope="col" className="px-3 py-3">Design File</th>
                                 <th scope="col" className="px-3 py-3">Demonstration File</th>
+                                <th scope="col" className="px-3 py-3">PDS</th>
+                                <th scope="col" className="px-3 py-3">CDR</th>
+                                <th scope="col" className="px-3 py-3">Technical</th>
+                                <th scope="col" className="px-3 py-3">Buisness</th>
+                                <th scope="col" className="px-3 py-3">Network</th>
+
+
                             </tr>
                         </thead>
                         <tbody>
@@ -117,7 +136,6 @@ const AdminViewUsers = () => {
                                 <tr key={entry.id} className="text-white dark:border-gray-700">
                                     <td className="px-3 py-4">{index + 1}</td>
                                     <td className="px-3 py-4">{entry.teamname}</td>
-                                    <td className="px-3 py-4">{entry.email}</td>
                                     <td className="px-3 py-4">
                                         {entry.designfile ? (
                                             <a
@@ -141,6 +159,76 @@ const AdminViewUsers = () => {
                                                 className="text-blue-600 underline hover:text-blue-800"
                                             >
                                                 View Demonstration File
+                                            </a>
+                                        ) : (
+                                            <span className="text-red-500">not uploaded yet</span>
+                                        )}
+                                    </td>
+                                    <td className="px-3 py-4">
+                                        {entry.pds ? (
+                                            <a
+                                                href={entry.pds}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-600 underline hover:text-blue-800"
+                                            >
+                                                View PDS File
+                                            </a>
+                                        ) : (
+                                            <span className="text-red-500">not uploaded yet</span>
+                                        )}
+                                    </td>
+                                    <td className="px-3 py-4">
+                                        {entry.cdr ? (
+                                            <a
+                                                href={entry.cdr}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-600 underline hover:text-blue-800"
+                                            >
+                                                View CDR File
+                                            </a>
+                                        ) : (
+                                            <span className="text-red-500">not uploaded yet</span>
+                                        )}
+                                    </td>
+                                    <td className="px-3 py-4">
+                                        {entry.technology ? (
+                                            <a
+                                                href={entry.technology}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-600 underline hover:text-blue-800"
+                                            >
+                                                View Technical File
+                                            </a>
+                                        ) : (
+                                            <span className="text-red-500">not uploaded yet</span>
+                                        )}
+                                    </td>
+                                    <td className="px-3 py-4">
+                                        {entry.business ? (
+                                            <a
+                                                href={entry.business}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-600 underline hover:text-blue-800"
+                                            >
+                                                View Business File
+                                            </a>
+                                        ) : (
+                                            <span className="text-red-500">not uploaded yet</span>
+                                        )}
+                                    </td>
+                                    <td className="px-3 py-4">
+                                        {entry.network ? (
+                                            <a
+                                                href={entry.network}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-blue-600 underline hover:text-blue-800"
+                                            >
+                                                View Network File
                                             </a>
                                         ) : (
                                             <span className="text-red-500">not uploaded yet</span>

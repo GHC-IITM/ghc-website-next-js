@@ -29,7 +29,7 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import useGetTeam from "../utils/useGetTeam";
-import { FaChevronDown, FaUser } from "react-icons/fa";
+import { FaChevronDown, FaFileAlt, FaUser } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { signOut, useSession } from "next-auth/react";
 import { Loading } from "@/app/dashboard/page";
@@ -156,7 +156,7 @@ export default function WithSubnavigation() {
                     </motion.div>
                   </>
                 ) : (
-                  <Link href={"/signup"}>
+                  <Link href={"https://drive.google.com/file/d/1JqdF2sRRrBUIB11fFEkhHMLb8VppM6pR/view?usp=sharing"}>
                     <motion.div
                       whileTap={{ scale: 0.95 }}
                       whileHover={{ scale: 1.05 }}
@@ -171,9 +171,9 @@ export default function WithSubnavigation() {
                         _hover={{
                           bg: "red.500",
                         }}
-                        rightIcon={<FaUser />}
+                        rightIcon={<FaFileAlt />}
                       >
-                        Register
+                        Event Guide
                       </Button>
                     </motion.div>
                   </Link>
@@ -420,7 +420,7 @@ const NAV_ITEMS: Array<NavItem> = [
     href: "/documents",
   },
   {
-    label:"Categories",
-    href:"/categories"
-  }
+    label: "Categories",
+    href: "/categories",
+  },
 ];

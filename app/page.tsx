@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Subscribe from "../components/Subscribe";
 import HeroSection from "../components/HomeHero";
+import Spons from "../components/spons";
 import Footer from "../components/Footer";
 import Business from "../components/Business";
 import FAQ from "../components/FAQ";
@@ -17,6 +18,7 @@ const Home: React.FC<any> = () => {
       <Box maxWidth={"full"}>
         <Navbar />
         <HeroSection />
+        <Spons />
         <Business />
         {/* <SplitWithImage /> */}
        

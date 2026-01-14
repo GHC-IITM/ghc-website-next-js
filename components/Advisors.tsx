@@ -20,6 +20,7 @@ const Card: React.FC<any> = ({ adv }: any) => {
       spacing={3}
       direction={"column"}
       width={"300px"}
+      
       justify={"center"}
       display={"flex"}
       align={"center"}
@@ -137,4 +138,10 @@ const advisors = [
     titles: `President Emeritus and Founding Board Member at IIT Madras Foundation`,
     linkedin: "https://www.linkedin.com/in/seshanrammohan/",
   },
+  {
+    imgUrl: "/arpit.jpg",
+    name: "Arpit Garg",
+    titles: `Founder, GHC`,
+    linkedin: "https://www.linkedin.com/in/arpit-garg-b9286b217/",
+  }
 ];
